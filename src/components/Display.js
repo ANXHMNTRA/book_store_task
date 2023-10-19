@@ -5,17 +5,11 @@ import ViewTable from './ViewTable';
 import SearchBar from './SearchBar';
 
 function Display() {
-    const [books, setBooks] = useState([
-        {
-            "author": "zsdvzd",
-            "country": "sdasfasf",
-            "language": "afewafszd",
-            "link": "cxvxcvx",
-            "pages": "334",
-            "title": "thejas911",
-            "year": "vzsv",
-            "id": 667
-        }])
+    const [books, setBooks] = useState([])
+    const [currentPage, setCurrentPage] = useState(1)
+    const [totalPages, setTotalPages] = useState('')
+    const [itemsPerPage, setItemsPerPage] = useState(10)
+    const [sortOrder, setSortOrder] = useState('') //order => DESC / ASC
     const [loaderActive, setLoaderActive] = useState(false)
 
     const dispatch = useDispatch()

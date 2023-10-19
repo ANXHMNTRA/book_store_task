@@ -17,7 +17,9 @@ const SearchBar = ({ onSearch, onAddBook }) => {
                 onChange={(e) => setSearchText(e.target.value)}
             />
             <button onClick={handleSearch}> <i className='fa fa-search' />  Search </button>
-            <button onClick={onAddBook}>  <i className='fa fa-plus' /> Book </button>
+            <button onClick={onAddBook}>  <i className="fa-solid fa-sort"></i> Sort </button>
+            <button className='add-book-button' onClick={onAddBook}>  <i className='fa fa-plus' /> Book </button>
+           
         </div>
     );
 };
