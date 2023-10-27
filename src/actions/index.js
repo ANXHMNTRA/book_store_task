@@ -23,7 +23,7 @@ export const displayBooks = () => {
     return async (dispatch) => {
         const response = await apis.get('/books');
         if (response) {
-            console.log("res in action", response)
+            // console.log("res in action", response)
             dispatch({ type: 'DISPLAY_BOOKS', payload: response.data })
         }
         return response

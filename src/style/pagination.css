@@ -1,0 +1,30 @@
+.pagination-container {
+  list-style-type: none;
+  /* height: 2rem; */
+  /* float: left; */
+  /* width: 50vw; */
+  margin: 10px 10px;
+  background-color: rgb(209, 177, 240);
+  border-radius: 10px;
+}
+
+.pagination-container>ul {
+  list-style: none;
+  display: flex;
+  margin: 10px;
+  justify-content: space-evenly;
+}
+
+ul li {
+  display: flex;
+  cursor: pointer;
+  margin: 10 10px;
+}
+
+.active {
+  color: rgb(28, 127, 214);
+  background-color: rgb(245, 204, 236);
+  padding: 0 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
