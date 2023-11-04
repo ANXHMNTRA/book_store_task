@@ -10,21 +10,24 @@ const ViewTable = ({ books }) => {
             <table className="custom-table">
                 <thead>
                     <tr>
+                        <th> No.</th>
                         <th>ID</th>
+                        <th>Title</th>
                         <th>Author</th>
                         <th>Country</th>
                         <th>Language</th>
                         <th>Link</th>
                         <th>Pages</th>
-                        <th>Title</th>
                         <th>Year</th>
                         <th>actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {books?.map((book) => (
+                    {books?.map((book, index) => (
                         <tr key={book.id}>
+                            <td>{index + 1}</td>
                             <td>{book.id}</td>
+                            <td>{book.title}</td>
                             <td>{book.author}</td>
                             <td>{book.country}</td>
                             <td>{book.language}</td>
@@ -34,7 +37,6 @@ const ViewTable = ({ books }) => {
                                 </a>
                             </td>
                             <td>{book.pages}</td>
-                            <td>{book.title}</td>
                             <td>{book.year}</td>
                             <td> <i className="fas fa-edit" onClick={() => console.log(book.id)}></i></td>
                         </tr>
